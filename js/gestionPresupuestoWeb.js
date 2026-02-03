@@ -188,6 +188,16 @@ function repintar() {
     for (let gasto of lGastos) {
         mostrarGastoWeb("listado-gastos-completo", gasto)
     }
+
+    let gastosDia = gp.agruparGastos("dia");
+    mostrarGastosAgrupadosWeb("agrupacion-dia", gastosDia, "dia");
+
+    let gastosMes = gp.agruparGastos("mes");
+    mostrarGastosAgrupadosWeb("agrupacion-mes", gastosMes, "mes");
+
+    let gastosAnyo = gp.agruparGastos("anyo");
+    mostrarGastosAgrupadosWeb("agrupacion-anyo", gastosAnyo, "anyo");
+
 }
 
 function actualizarPresupuestoWeb() {
